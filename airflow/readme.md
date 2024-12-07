@@ -31,10 +31,10 @@ This repository contains a Docker Compose configuration for setting up Apache Ai
    - Password: `admin`
 
 4. Add your DAGs:
-   Place your DAG files in the `dags` directory (`/Users/rogoben/Downloads/basic-airflow/dags`).
+   Place your DAG files in the `dags` directory (`/basic-airflow/dags`).
 
 5. View logs:
-   Logs are available in the `logs` directory (`/Users/rogoben/Downloads/basic-airflow/logs`).
+   Logs are available in the `logs` directory (`/basic-airflow/logs`).
 
 ## Customization
 - Update environment variables in the `docker-compose.yml` file for your specific use case.
