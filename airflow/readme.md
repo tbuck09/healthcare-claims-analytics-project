@@ -46,8 +46,16 @@ To stop the containers:
 docker-compose down
 ```
 
+## Other steps
+You'll also need to download claims and beneficiary data from [here](https://data.cms.gov/collection/synthetic-medicare-enrollment-fee-for-service-claims-and-prescription-drug-event) to use for the files I have currently hard-coded.
+
+- [Claims](https://data.cms.gov/sites/default/files/2023-04/67157de9-d962-4af0-bf0e-3578b3afec58/inpatient.csv)
+- [Beneficiaries](https://data.cms.gov/sites/default/files/2023-04/d5da04d5-61c8-4174-be11-02d0f58217e7/beneficiary_2015.csv)
+
 ## TODO
-Create a process to run the creat data warehouse scripts on snowflake
+- Build S3 trigger via event bridge to fire when files are dropped into it
+- Create a process to run the create data warehouse scripts on snowflake
+- Build out transforms for other entities
 
 ## Troubleshooting
 - Ensure Docker and Docker Compose are installed and running.
