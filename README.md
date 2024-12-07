@@ -36,7 +36,11 @@ Here is how the data sets are broken down.
 
 <img width="598" alt="Screen Shot 2024-11-20 at 1 45 49 PM" src="https://github.com/user-attachments/assets/84349c39-ec2e-4812-bc8f-546346b54d02">
 
+## System Design
 
+The overall goal of the system that is being built is that it can easily accomodate new companies data sets. So instead of having to build a new pipeline every time, you'd simply create a new transform script that standardizing the new data to fit the expected output. From their any data product would simply ingest the new data without any issues.
+
+<img width="1192" alt="Screen Shot 2024-12-06 at 7 04 03 PM" src="https://github.com/user-attachments/assets/da196973-17a6-4d1e-ac7b-7c62e029e4cf">
 
 
 ## Project Ideas
