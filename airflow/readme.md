@@ -36,7 +36,7 @@ This repository contains a Docker Compose configuration for setting up Apache Ai
 5. View logs:
    Logs are available in the `logs` directory (`/basic-airflow/logs`).
 
-6.Other steps
+6. Other steps
 
 You'll also need to download claims and beneficiary data from [here](https://data.cms.gov/collection/synthetic-medicare-enrollment-fee-for-service-claims-and-prescription-drug-event) to use for the files I have currently hard-coded.
 
