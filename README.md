@@ -30,11 +30,12 @@ Here is how the data sets are broken down.
 - Prescriptions
 - NDC - Drug descriptions
 - Location broken down by county
+- 
+<img width="932" alt="Screen Shot 2024-11-20 at 2 06 41 PM" src="https://github.com/user-attachments/assets/df1023d8-8aab-4462-9090-a35a0f4b63fb">
+
+<img width="598" alt="Screen Shot 2024-11-20 at 1 45 49 PM" src="https://github.com/user-attachments/assets/84349c39-ec2e-4812-bc8f-546346b54d02">
 
 
-<img width="598" alt="Screen Shot 2024-11-20 at 1 45 49 PM" src="https://github.com/user-attachments/assets/d5cf4887-df65-4a77-bdeb-b93b26f414db">
-
-<img width="932" alt="Screen Shot 2024-11-20 at 2 06 41 PM" src="https://github.com/user-attachments/assets/afae43b9-be6d-4fdf-b5ad-e3b892becca0">
 
 
 ## Project Ideas
