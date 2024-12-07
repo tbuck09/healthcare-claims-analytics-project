@@ -52,10 +52,13 @@ You'll also need to download claims and beneficiary data from [here](https://dat
 - [Claims](https://data.cms.gov/sites/default/files/2023-04/67157de9-d962-4af0-bf0e-3578b3afec58/inpatient.csv)
 - [Beneficiaries](https://data.cms.gov/sites/default/files/2023-04/d5da04d5-61c8-4174-be11-02d0f58217e7/beneficiary_2015.csv)
 
+Currently there are a few config set-ups that could be handled in the Docker compose but aren't. For example, snowflake_default will need to be created. If you haven't set up an Airflow connection, you should read [this](https://airflow.apache.org/docs/apache-airflow/stable/howto/connection.html). I am sure there are a few other issues. I just wanted to get this out there in case people wanted to check out the code, but I'll be working on it as I have time. But also feel free to raise issues.
+
 ## TODO
 - Build S3 trigger via event bridge to fire when files are dropped into it
 - Create a process to run the create data warehouse scripts on snowflake
 - Build out transforms for other entities
+- Add snowflake_default to the config set-up to pick up from a local file
 
 ## Troubleshooting
 - Ensure Docker and Docker Compose are installed and running.
