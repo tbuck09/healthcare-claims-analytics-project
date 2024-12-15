@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 networks:
   airflow_network:
 
@@ -13,6 +13,10 @@ services:
       - POSTGRES_DB=airflow
     volumes:
       - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow"]
+      interval: 10s
+      retries: 6
 
   operations-db:
     image: postgres:13
@@ -25,7 +29,6 @@ services:
     volumes:
       - ./operations-db-init:/docker-entrypoint-initdb.d
 
-
   airflow-init:
     image: apache/airflow:2.10.3
     environment:
@@ -35,7 +38,8 @@ services:
       - AIRFLOW__CORE__FERNET_KEY=FB0o_zt4e3Ziq3LdUUO7F2Z95cvFFx16hU8jTeR1ASM=
     entrypoint: "bash -c 'airflow db init && airflow users create --username admin --password admin --firstname Admin --lastname Admin --role Admin --email admin@example.com'"
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
 
   airflow-webserver:
     image: apache/airflow:2.10.3
