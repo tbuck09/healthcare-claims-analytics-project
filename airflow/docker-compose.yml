@@ -16,6 +16,7 @@ services:
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U airflow"]
       interval: 10s
+      timeout: 5s
       retries: 6
 
   operations-db:
@@ -38,7 +39,7 @@ services:
       - AIRFLOW__CORE__FERNET_KEY=FB0o_zt4e3Ziq3LdUUO7F2Z95cvFFx16hU8jTeR1ASM=
     entrypoint: >
       bash -c "
-      until nc -z postgres 5432; do
+      until pg_isready -h postgres -p 5432 -U airflow; do
         echo 'Waiting for Postgres to be ready...';
         sleep 5;
       done;
