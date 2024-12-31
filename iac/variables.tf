@@ -35,7 +35,7 @@ variable "number_of_instances" {
 variable "instance_key" {
   type        = string
   description = "Secure key pair to use for SSH access into the EC2 instance(s)."
-  default     = ""
+  default     = "treebux-ec2-a"
   validation {
     condition     = length(var.instance_key) > 0
     error_message = "An instance key must be a declared."

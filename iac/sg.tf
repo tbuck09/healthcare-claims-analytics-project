@@ -1,5 +1,5 @@
 resource "aws_security_group" "sg" {
-  name        = "allow_ssh_http"
+  name        = "sg_healthcare_claims_analytics_project"
   description = "Allow ssh http inbound traffic"
   vpc_id      = aws_vpc.healthcare_claims_analytics_project_vpc.id
 
@@ -39,6 +39,6 @@ resource "aws_security_group" "sg" {
   }
 
   tags = {
-    Name = "allow_ssh_http"
+    Name = "sg_healthcare_claims_analytics_project"
   }
 }
